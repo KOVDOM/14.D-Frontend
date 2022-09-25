@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Házi</title>
+    <script>
+        let x=Math.floor((Math.random()*90)+1);
+         const tomb=[];
+         const paros=[];
+         const harmad=[];
+         const otod=[];
+         for(let j=1;j<=5;j++){
+         for(let i=0;i<5;i++){
+            x=Math.floor((Math.random()*90)+1);
+             if(tomb.includes(x)){
+                 x=Math.floor((Math.random()*90)+1);               
+             }else{
+                 tomb.push(x);
+             }
+                 if(tomb[i]%2==1){
+                 x=tomb[i];
+                 }else{
+                    paros.push(x);
+                }if(tomb[i]%3==1){
+                 x=tomb[i];
+                 }else{
+                    harmad.push(x);
+                }if(tomb[i]%5==1){
+                 x=tomb[i];
+                 }else{
+                    otod.push(x);
+                }
+            }            
+         console.log(tomb);
+         for(let k=1;k<=5;k++){
+             tomb.pop();
+         }
+         }
+         console.log("Páros számok: ");
+         console.log(paros);
+         console.log("3-al osztható számok: ");
+         console.log(harmad);
+         console.log("5-el osztható számok: ");
+         console.log(otod);
+    </script>
+</head>
+<body>
+    <h1>Hi</h1>
+</body>
+</html>
