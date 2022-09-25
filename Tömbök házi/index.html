@@ -6,32 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Házi</title>
     <script>
+        "use strict";   
         let x=Math.floor((Math.random()*90)+1);
          const tomb=[];
          const paros=[];
          const harmad=[];
          const otod=[];
+         let z=0;
+         let y=0;
+         let w=0;
          for(let j=1;j<=5;j++){
          for(let i=0;i<5;i++){
-            x=Math.floor((Math.random()*90)+1);
+            x=Math.floor((Math.random()*89)+2);
              if(tomb.includes(x)){
-                 x=Math.floor((Math.random()*90)+1);               
+                 x=Math.floor((Math.random()*89)+2);
              }else{
                  tomb.push(x);
-             }
-                 if(tomb[i]%2==1){
-                 x=tomb[i];
-                 }else{
-                    paros.push(x);
-                }if(tomb[i]%3==1){
-                 x=tomb[i];
-                 }else{
-                    harmad.push(x);
-                }if(tomb[i]%5==1){
-                 x=tomb[i];
-                 }else{
-                    otod.push(x);
-                }
+             }  
+             if (tomb[i]%2==0) { paros[w]=tomb[i]; w++;}
+                if (tomb[i]%5==0) { otod[z]=tomb[i]; z++;}
+                if (tomb[i]%3==0) { harmad[y]=tomb[i]; y++;}                   
             }            
          console.log(tomb);
          for(let k=1;k<=5;k++){
